@@ -30,6 +30,6 @@ You should see a widget like this:
 ![screenshot](/images/screenshot.png)
 
 
-
+The styling is nothing to write home about. If you want to dress up the (ugh) CSS, feel free to send me a PR.
 
 
