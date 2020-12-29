@@ -1,9 +1,8 @@
-# hugo-last-fm-shortcode
-Hugo Shortcode to Display Now Playing from Last.fm
+# Hugo Shortcode for Last.fm
 
 ## What Is This?
 
-This is a shortcodoe for adding a widget to your Hugo blog. It will display the current 
+This is a shortcode for adding a widget to your Hugo blog. It will display the current 
 (or last) track you scrobbled to [Last.fm.](https://www.last.fm/)
 
 ## Installation
