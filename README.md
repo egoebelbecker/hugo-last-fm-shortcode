@@ -27,6 +27,8 @@ Here’s the shortcode:
 
 You should see a widget like this:
 
+![screenshot](/images/screenshot.png)
+
 
 
 
