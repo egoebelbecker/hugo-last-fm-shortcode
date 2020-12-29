@@ -1,0 +1,44 @@
+<!-- 
+ * Copyright (c) 2020 Eric Goebelbecker.
+ * 
+ * This program is free software: you can redistribute it and/or modify  
+ * it under the terms of the GNU General Public License as published by  
+ * the Free Software Foundation, version 3.
+ *
+ * This program is distributed in the hope that it will be useful, but 
+ * WITHOUT ANY WARRANTY; without even the implied warranty of 
+ * MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE. See the GNU 
+ * General Public License for more details.
+ *
+ * You should have received a copy of the GNU General Public License 
+ * along with this program. If not, see <http://www.gnu.org/licenses/>.
+-->
+
+
+
+<script src="/js/nowplaying.js"></script>
+
+<link rel="stylesheet" href="/css/nowplaying.css">
+
+<div class="nowplayingcard">
+	<div class="nowplayingcontainer-inner">
+		<div class="trackInfo">
+			<p>Track: <a id="tracktitle"></a></p>
+			<p>Album: <a id="album"></a></p>
+			<a id="artist"></a></p>
+		</div>
+		<img id="trackart" src="#">
+	</div>
+</div>
+
+<script>
+setInterval(getLastTrack({{ .Get "user" }},{{ .Get "key" }}), 10 * 1000);
+</script>
+
+
+
+
+
+
+
+
