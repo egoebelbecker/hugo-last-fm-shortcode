@@ -23,9 +23,7 @@ const REQ_PARAMS = "&format=json&limit=1"
 function getDetail(item, requestType, key) {
 
     const detailNode = document.getElementById(requestType);
-
 	if (Object.values(item).indexOf('mbid') > -1) {
-
         const detailUrl = URL_BASE + requestType + ".getinfo" + KEY_PARAM + key + MB_PARAM + item["mbid"] + REQ_PARAMS
         let detailRequest = null;
         if (window.XMLHttpRequest) {
@@ -38,14 +36,8 @@ function getDetail(item, requestType, key) {
             if (detailRequest.readyState === XMLHttpRequest.DONE) {
                 if (detailRequest.status === 200) {
                     const response = JSON.parse(detailRequest.responseText);
-
-                    if (requestType === "album") {
-                        detailNode.setAttribute("href", response.album["url"])
-                        detailNode.innerText = response.album["name"]
-                    } else {
-                        detailNode.setAttribute("href", response.artist["url"])
-                        detailNode.innerText = response.artist["name"]
-                    }
+                    detailNode.setAttribute("href", response[requestType]["url"])
+                    detailNode.innerText = response[requestType]["name"]
                 }
             }
         }
@@ -63,7 +55,6 @@ function getLastTrack(user, key) {
     const recentTracksUrl =
         URL_BASE + TRACK_METHOD + user + KEY_PARAM + key + REQ_PARAMS
 
-    let httpRequest = null;
     if (window.XMLHttpRequest) {
         httpRequest = new XMLHttpRequest();
     } else {
@@ -74,7 +65,6 @@ function getLastTrack(user, key) {
         if (httpRequest.readyState === XMLHttpRequest.DONE) {
             const titleNode = document.getElementById("tracktitle");
             const imageNode = document.getElementById("trackart");
-            const artistNode = document.getElementById("artist")
             const albumNode = document.getElementById("album")
 
             if (httpRequest.status === 200) {
@@ -100,7 +90,4 @@ function getLastTrack(user, key) {
     }
     httpRequest.open('GET', recentTracksUrl, true);
     httpRequest.send();
-
 }
-
-
