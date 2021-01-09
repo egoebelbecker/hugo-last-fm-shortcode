@@ -14,22 +14,6 @@
  * along with this program. If not, see <http://www.gnu.org/licenses/>.
  */
 
-
-/* Do we still have to do crap like this in 2020? Yes. Yes we do. */
-@mixin border-left-radius($radius) {
-    -webkit-border-top-left-radius: $ radius;
-    -moz-border-top-left-radius: $ radius;
-    -ms-border-top-left-radius: $ radius;
-    -o-border-top-left-radius: $ radius;
-    border-top-left-radius: $ radius;
-
-    -webkit-border-bottom-left-radius: $ radius;
-    -moz-border-bottom-left-radius: $ radius;
-    -ms-border-bottom-left-radius: $ radius;
-    -o-border-bottom-left-radius: $ radius;
-    border-bottom-left-radius: $ radius;
-}
-
 .nowplayingcard {
     margin: 0 auto;
     margin-top: 5%
@@ -40,15 +24,12 @@
     transition: 0.3s;
     padding: 50px;
     display: inline-flex;
-    @include border-left-radius(5px);
 }
-
 
 img#trackart {
     width: 100%;
     float: left;
     left: 0;
-    @include border-left-radius($globalBorderRadius);
 }
 
 .trackInfo {
@@ -63,5 +44,3 @@ a.trackInfo {
     font-size: 13px !important;
     text-overflow: ellipsis;
 }
-
-
